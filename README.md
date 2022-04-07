@@ -25,3 +25,7 @@ Expo CLI will automatically fetch/resize/covert for each platform.
 | `padding`          | padding to apply to around the emoji                                     | `30`         |
 | `color`            | CSS color name to use for background image                               | `dodgerblue` |
 | `auto_color_style` | A weird prop that makes an emoji fill the canvas, good for faces like 😀 | `flood`      |
+
+# Why Not This Endpoint!
+
+Probably full of bugs, feel free to PR, fork, redeploy, etc.
