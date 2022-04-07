@@ -281,6 +281,8 @@ function resolveIconUrl(resolve: { name?: any; hex?: any }): string {
 // Random list of fun emojis, converted to unicode since my computer is on the latest os.
 function getRandomEmoji() {
   const emojiList = [
+    "1f953",
+    "1f951",
     "1faac",
     "1fae0",
     "1fae6",
