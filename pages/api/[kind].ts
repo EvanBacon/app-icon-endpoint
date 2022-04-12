@@ -34,7 +34,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const iconId = getFirst<string | undefined>(req.query.icon);
+  const iconId = getFirst<string | undefined>(
+    req.query.icon || req.query.icon_id
+  );
 
   if (containsDoubleByte(iconId)) {
     // redirect with icon as unicode
