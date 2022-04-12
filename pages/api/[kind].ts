@@ -34,11 +34,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const iconId = getFirst<string | undefined>(req.query.icon_id);
+  const iconId = getFirst<string | undefined>(req.query.icon);
 
   if (containsDoubleByte(iconId)) {
-    // redirect with icon_id as unicode
-    req.query.icon_id = toUnicode(iconId);
+    // redirect with icon as unicode
+    req.query.icon = toUnicode(iconId);
     delete req.query.kind;
     const url = req.url!;
     const redirect = `${url.slice(0, url.indexOf("?"))}?${querystring.stringify(
@@ -75,7 +75,6 @@ export default async function handler(
 
     const parsed = getColorAsHex(color);
     if (parsed) {
-      // redirect with icon_id as unicode
       req.query.color_hex = parsed.substring(1);
       delete req.query.color;
       delete req.query.kind;
